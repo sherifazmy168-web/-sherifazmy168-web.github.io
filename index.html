@@ -1,88 +1,270 @@
-<!DOCTYPE html> <html lang="ar" dir="rtl"> <head> <meta charset="UTF-8"> <meta
-name="viewport" content="width=device-width, initial-scale=1.0"> <title>روضدي عزمي شريف| 
-Senior Project Manager & Civil Engineer</title> <!-- أنيق عربي خط استيراد) Cairo) --> <link
-href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=sw
-ap" rel="stylesheet"> <!-- األيقونات مكتبة FontAwesome --> <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style> :root { --primary-color: #1e3a8a; /* واحترافي هندسي داكن أزرق / --secondary-color: #0d9488; /
-عصري تركواز / --accent-color: #f59e0b; / القيادية للمهام ذهبية لمسة* / --bg-color: #f8fafc; --text-color:
-#1e293b; --card-bg: #ffffff; --border-color: #e2e8f0; }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; }
-header { background: linear-gradient(135deg, var(--primary-color), #0f172a); color: white;
-padding: 4rem 2rem; text-align: center; position: relative; clip-path: polygon(0 0, 100% 0, 100%
-90%, 0 100%); }
-.header-content h1 { font-size: 2.8rem; font-weight: 900; margin-bottom: 0.5rem; }
-.header-content h2 { font-size: 1.4rem; font-weight: 600; color: var(--accent-color);
-margin-bottom: 1.5rem; }
-.header-content p { max-width: 700px; margin: 0 auto 2rem auto; font-size: 1.1rem; color:
-#cbd5e1; }
-.btn { display: inline-block; background-color: var(--secondary-color); color: white; padding:
-0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s
-ease; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-.btn:hover { background-color: #0f766e; transform: translateY(-2px); }
-.container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
-section { margin-bottom: 4rem; }
-section h3 { font-size: 2rem; color: var(--primary-color); margin-bottom: 2rem; position: relative;
-padding-bottom: 0.5rem; }
-section h3::after { content: ''; position: absolute; bottom: 0; right: 0; width: 60px; height: 4px;
-background-color: var(--accent-color); border-radius: 2px; }
-/* الكروت شبكة* / .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-gap: 2rem; }
-.card { background: var(--card-bg); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px
--1px rgba(0, 0, 0, 0.1); border: 1px solid var(--border-color); transition: transform 0.3s ease,
-box-shadow 0.3s ease; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-.card h4 { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.5rem; }
-.card .subtitle { font-size: 0.95rem; color: var(--secondary-color); font-weight: 600;
-margin-bottom: 1rem; }
-.card p { font-size: 1rem; color: #475569; }
-/* المهارات* / .skills-list { display: flex; flex-wrap: wrap; gap: 1rem; }
-.skill-tag { background-color: #e2e8f0; color: var(--primary-color); padding: 0.6rem 1.2rem;
-border-radius: 8px; font-weight: 600; font-size: 0.95rem; border: 1px solid #cbd5e1; }
-/* التواصل* / .contact-box { background: linear-gradient(135deg, var(--primary-color), #0f172a);
-color: white; text-align: center; border-radius: 16px; padding: 3rem 2rem; }
-.contact-box p { color: #cbd5e1; margin-bottom: 2rem; font-size: 1.1rem; }
-.social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
-.social-links a { color: white; font-size: 1.8rem; transition: color 0.3s ease; }
-.social-links a:hover { color: var(--accent-color); } footer { text-align: center; padding: 2rem; background-color: #0f172a; color: #94a3b8; font-size:
-0.9rem; }
-@media (max-width: 768px) { .header-content h1 { font-size: 2.2rem; } } </style> </head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>م. شريف عزمي رشدي | مدير مشاريع ومدير تنفيذ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --secondary-color: #1e293b;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            color: #93c5fd;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            max-width: 750px;
+            margin: 0 auto 25px auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-right: 4px solid var(--accent-color);
+            padding-right: 12px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .experience-item {
+            border-right: 2px solid var(--border-color);
+            padding-right: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            right: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .job-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #eff6ff;
+            color: var(--accent-color);
+            border: 1px solid #bfdbfe;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-light);
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            header h2 { font-size: 1.1rem; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
 <body>
-<!-- الصفحة رأس --> <header> <div class="header-content"> <h1>روضدي عزمي شريف>/h1>
-<h2>Senior Project Manager & Civil Engineer</h2> <p>البنية ،الكبرى اإلنشائية المشاريع إدارة في متخصص
-i"><btn="class" contact#="href a> <p/<.التحتية، والتطوير العقاري بخبرة ميدانية وتعاقدية واسعة في السوق المصري
-class="fas fa-envelope"></i> معي تواصل>/a> </div> </header>
-<div class="container">
-مهندس مدني ومدير<p"> <card="class div> <3h/<الملخص التنفيذي<3h> <section> <-- الملخص المهني --!>
-مشاريع بخبرة طويلة في إدارة تنفيذ المشروعات السكنية، الساحلية، والتجارية الكبرى )مثل مشاريع رأس الحكمة، العاصمة اإلدارية،
-في إدارة الموقع، التخطيط الزمني، ضبط الجودة، ومتابعة المستخلصات والمطالبات التعاقدية
-(EOT (وغيرها(. أمتلك سجالً حافالً
-<section/> <div/> <p/<.لضمان تسليم المشاريع في المواعيد المحددة وبالكفاءة المطلوبة
-<!-- القيادية والمناصب الخبرات --> <section> <h3>البارزة المهنية المحطات>/h3> <div class="grid"> <div
-class="card"> <h4>Senior Project Manager</h4> <div class="subtitle">KRASS for Construction
-إدارة التنفيذ الميداني للمناطق السكنية، الفلل، الحوائط الخرسانية، وتوثيق<p> <div/)<Hekma El Ras (Seafront Skala| 
-تأخيرات الموقع وإدارتها
-ًتعاقديا .>/p> </div> <div class="card"> <h4>Project / Construction
-<div/)<مشاريع كبرى )سويس يونيفيرستي، آي سيتي القاهرة الجديدة، استيال بارك<"subtitle="class div> <4h/<Manager
-<div/> <p/<.اإلشراف الهندسي الشامل، إدارة المقاولين، ومتابعة الجدول الزمني وااللتزام بالمعايير الهندسية الفنية الصارمة<p<
-<div class="card"> <h4>Senior Site & Quantity Surveyor</h4> <div class="subtitle">المشروعات
-حصر الكميات، إعداد مستخلصات المقاولين، مطابقة المواصفات القياسية، وإعداد التقارير<p> <div/<القومية واإلسكان االجتماعي
-الدورية الهندسية.>/p> </div> </div> </section>
-<!-- واإلدارية الهندسية المهارات --> <section> <h3>التخصصية والقدرات المهارات>/h3> <div class="skills-list">
-<span class="skill-tag">اإلنشائية المشاريع إدارة) Project Management)</span> <span
-class="skill-tag">الخطابات وتسلسل التعاقدية المطالبات) EOT)</span> <span class="skill-tag">الكميات حصر
-المقاولين ومستخلصات>/span> <span class="skill-tag">المهنية والسالمة الجودة ضبط) QA/QC)</span> <span
-class="skill-tag">والمقاولين الموقع إدارة) Site Execution)</span> <span class="skill-tag">الهندسية األتمتة
-(Google Sheets & AppSheet)</span> <span class="skill-tag">AutoCAD & Revit</span> </div>
-</section>
-<!-- التواصل قسم --> <section id="contact"> <div class="contact-box"> <h3>المهني والتعاون للتواصل>/h3>
-div> <p/<.يسعدني التواصل معك لمناقشة الفرص االستشارية أو اإلدارية في قطاع اإلنشاءات والمقاوالت<p<
-class="social-links"> <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i
-class="fab fa-linkedin"></i></a> <a href="mailto:your-email@example.com" title="البريد
-اإللكتروني><"i class="fas fa-envelope"></i></a> <a href="tel:+201234567890" title="الهاتف><"i
-class="fas fa-phone"></i></a> </div> <a href="#" class="btn"><i class="fas fa-download"></i>
-الذاتية السيرة تحميل) PDF)</a> </div> </section>
-</div>
-<footer/> <p/<.شريف عزمي روضدي. جميع الحقوق محفوظة 2026 ©<p> <footer> <-- تذييل الصفحة --!>
-</body> </html>
+
+    <header>
+        <div class="header-content">
+            <h1>م. شريف عزمي رشدي</h1>
+            <h2>Senior Project Manager & Civil Engineer</h2>
+            <p>مهندس مدني ومدير مشاريع خبرة أكثر من 15 عاماً في قيادة وتنفيذ المشاريع السكنية والساحلية والبنية التحتية والمستشفيات والجامعات الكبرى، متخصص في إدارة الموقع والتخطيط والمطالبات التعاقدية (EOT).</p>
+            <a href="#contact" class="cta-btn"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h3 class="section-title"><i class="fas fa-briefcase"></i> الخبرات المهنية والقيادية</h3>
+
+            <div class="experience-item">
+                <div class="job-title">Senior Project Manager</div>
+                <div class="company-name">KRASS for Construction</div>
+                <div class="job-desc">إدارة التنفيذ الميداني للمناطق السكنية والفيلا والحوائط الخرسانية، وتوثيق التأخيرات وإدارتها تعاقدياً في مشروع سكالا رأس الحكمة.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Resident Engineer / Construction Manager</div>
+                <div class="company-name">مشاريع عملاقة (جامعة الملك سلمان، آي سيتي، ستيلا بارك)</div>
+                <div class="job-desc">الإشراف الفني والإنشائي والتنسيق الكامل مع الاستشاريين والالتزام بالمعايير الهندسية القياسية وتدقيق الأعمال.</div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Senior Site & Quantity Surveyor Engineer</div>
+                <div class="company-name">مشاريع الإسكان الاجتماعي والمستشفيات</div>
+                <div class="job-desc">إدارة المستخلصات وحصر الكميات بدقة ومطابقة المواصفات الفنية والجودة بالموقع.</div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-title"><i class="fas fa-tools"></i> المهارات والقدرات التخصصية</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">إدارة المشاريع الإنشائية (PMC)</span>
+                <span class="skill-tag">المطالبات التعاقدية (EOT)</span>
+                <span class="skill-tag">إدارة المقاولين والموقع</span>
+                <span class="skill-tag">حصر الكميات والمستخلصات</span>
+                <span class="skill-tag">ضبط الجودة والسلامة (QA/QC & HSE)</span>
+                <span class="skill-tag">الأتمتة الهندسية (Google Sheets & AppSheet)</span>
+                <span class="skill-tag">AutoCAD & Revit</span>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3 class="section-title"><i class="fas fa-envelope"></i> التواصل المهني</h3>
+            <p style="text-align: center; margin-bottom: 20px;">يسعدني التواصل والتعاون المهني في القطاعات الهندسية والتطوير العقاري.</p>
+            <div class="contact-links">
+                <a href="tel:+201015848520" class="contact-card"><i class="fas fa-phone"></i> +201015848520</a>
+                <a href="mailto:sherifazmy168@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> إرسال بريد إلكتروني</a>
+                <a href="https://www.linkedin.com/in/sherif-azmy-424a732a3/" target="_blank" class="contact-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 | م. شريف عزمي رشدي</p>
+    </footer>
+
+</body>
+</html>
