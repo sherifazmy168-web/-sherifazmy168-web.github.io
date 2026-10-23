@@ -1,270 +1,401 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>م. شريف عزمي رشدي | مدير مشاريع ومدير تنفيذ</title>
+    <title>Sherif Azmy Roushdy | Senior Project Manager</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0f172a;
-            --accent-color: #2563eb;
-            --secondary-color: #1e293b;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
+            --bg-dark: #0b1329;
+            --card-bg: #131e3a;
+            --accent-gold: #d4af37;
+            --accent-gold-light: #f3e5ab;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-blueprint: rgba(212, 175, 55, 0.2);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', 'Cairo', sans-serif;
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.7;
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #0b1329 0%, #1a284f 100%);
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 5px solid var(--accent-color);
-        }
-
-        .header-content {
-            max-width: 900px;
-            margin: 0 auto;
+            border-bottom: 3px solid var(--accent-gold);
+            position: relative;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
+            color: var(--text-main);
             margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         header h2 {
-            font-size: 1.3rem;
-            color: #93c5fd;
+            font-size: 1.4rem;
+            color: var(--accent-gold);
             font-weight: 600;
             margin-bottom: 20px;
         }
 
-        header p {
-            font-size: 1rem;
-            color: #cbd5e1;
-            max-width: 750px;
-            margin: 0 auto 25px auto;
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
+        .contact-info a {
+            color: var(--accent-gold-light);
             text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: color 0.2s;
         }
 
-        .cta-btn:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
+        .contact-info a:hover {
+            color: var(--accent-gold);
+            text-decoration: underline;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-blueprint);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .stat-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         section {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-            border: 1px solid var(--border-color);
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border-blueprint);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary-color);
-            border-right: 4px solid var(--accent-color);
-            padding-right: 12px;
-            margin-bottom: 25px;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+            margin-bottom: 30px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .experience-item {
-            border-right: 2px solid var(--border-color);
-            padding-right: 20px;
-            margin-bottom: 25px;
+        .timeline-item {
+            border-left: 2px solid var(--border-blueprint);
+            padding-left: 25px;
+            margin-bottom: 35px;
             position: relative;
         }
 
-        .experience-item::before {
+        .timeline-item::before {
             content: '';
             position: absolute;
-            right: -7px;
+            left: -7px;
             top: 5px;
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: var(--accent-color);
+            background-color: var(--accent-gold);
         }
 
-        .job-title {
-            font-size: 1.2rem;
+        .timeline-title {
+            font-size: 1.3rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--text-main);
         }
 
-        .company-name {
+        .timeline-company {
+            font-size: 1.05rem;
             font-weight: 600;
-            color: var(--accent-color);
+            color: var(--accent-gold);
             margin-bottom: 8px;
         }
 
-        .job-desc {
+        .timeline-desc {
             color: var(--text-muted);
             font-size: 0.95rem;
         }
 
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: #eff6ff;
-            color: var(--accent-color);
-            border: 1px solid #bfdbfe;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+        .portfolio-table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 15px;
+            overflow-x: auto;
+            display: block;
         }
 
-        .contact-card {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--bg-light);
-            padding: 12px 20px;
+        .portfolio-table th, .portfolio-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-blueprint);
+        }
+
+        .portfolio-table th {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .portfolio-table td {
+            color: var(--text-muted);
+            font-size: 0.95srem;
+        }
+
+        .portfolio-table td strong {
+            color: var(--text-main);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
             border-radius: 8px;
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
+            border: 1px solid var(--border-blueprint);
         }
 
-        .contact-card:hover {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
+        .skill-category h4 {
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .skill-category ul {
+            list-style-type: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .skill-category li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .skill-category li::before {
+            content: '▪';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
             color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 40px;
+            border-top: 1px solid var(--border-blueprint);
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            header h2 { font-size: 1.1rem; }
-            section { padding: 20px; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.1rem; }
+            section { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <h1>م. شريف عزمي رشدي</h1>
-            <h2>Senior Project Manager & Civil Engineer</h2>
-            <p>مهندس مدني ومدير مشاريع خبرة أكثر من 15 عاماً في قيادة وتنفيذ المشاريع السكنية والساحلية والبنية التحتية والمستشفيات والجامعات الكبرى، متخصص في إدارة الموقع والتخطيط والمطالبات التعاقدية (EOT).</p>
-            <a href="#contact" class="cta-btn"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+        <h1>Sherif Azmy Roushdy</h1>
+        <h2>Senior Project Manager | Construction & Mega Projects</h2>
+        <div class="contact-info">
+            <span><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</span>
+            <span><i class="fas fa-phone"></i> +20 1283505653</span>
+            <span><i class="fas fa-envelope"></i> <a href="mailto:sherifazmy15@yahoo.com">sherifazmy15@yahoo.com</a></span>
+            <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/sherif-azmey-88612230" target="_blank">LinkedIn Profile</a></span>
         </div>
     </header>
 
     <div class="container">
 
+        <!-- Core Metrics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">21 Billion+ EGP</div>
+                <div class="stat-desc">Total value of successfully delivered residential, healthcare, educational, and mixed-use mega projects.</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+ Years</div>
+                <div class="stat-desc">Progressive experience ascending from Quantity Surveyor to Senior Project Manager.</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25+ Experts</div>
+                <div class="stat-desc">Direct leadership of multidisciplinary teams spanning engineering, technical, procurement, and finance.</div>
+            </div>
+        </div>
+
+        <!-- Career Timeline / Experience -->
         <section>
-            <h3 class="section-title"><i class="fas fa-briefcase"></i> الخبرات المهنية والقيادية</h3>
+            <h3 class="section-title"><i class="fas fa-history"></i> Professional Journey</h3>
 
-            <div class="experience-item">
-                <div class="job-title">Senior Project Manager</div>
-                <div class="company-name">KRASS for Construction</div>
-                <div class="job-desc">إدارة التنفيذ الميداني للمناطق السكنية والفيلا والحوائط الخرسانية، وتوثيق التأخيرات وإدارتها تعاقدياً في مشروع سكالا رأس الحكمة.</div>
+            <div class="timeline-item">
+                <div class="timeline-title">Senior Project Manager</div>
+                <div class="timeline-company">KRASS Construction (Present)</div>
+                <div class="timeline-desc">Total command over project budget, rigorous schedule control, and strategic end-to-end delivery for luxury coastal developments like Skala Seafront (Ras El Hekma - 600M EGP).</div>
             </div>
 
-            <div class="experience-item">
-                <div class="job-title">Resident Engineer / Construction Manager</div>
-                <div class="company-name">مشاريع عملاقة (جامعة الملك سلمان، آي سيتي، ستيلا بارك)</div>
-                <div class="job-desc">الإشراف الفني والإنشائي والتنسيق الكامل مع الاستشاريين والالتزام بالمعايير الهندسية القياسية وتدقيق الأعمال.</div>
+            <div class="timeline-item">
+                <div class="timeline-title">Resident Engineer</div>
+                <div class="timeline-company">DMA Design Engineering (2022 - 2025)</div>
+                <div class="timeline-desc">Directing massive contractor coordination, reporting, and proactive risk mitigation on large-scale educational campuses including Suez University (15 Billion EGP).</div>
             </div>
 
-            <div class="experience-item">
-                <div class="job-title">Senior Site & Quantity Surveyor Engineer</div>
-                <div class="company-name">مشاريع الإسكان الاجتماعي والمستشفيات</div>
-                <div class="job-desc">إدارة المستخلصات وحصر الكميات بدقة ومطابقة المواصفات الفنية والجودة بالموقع.</div>
+            <div class="timeline-item">
+                <div class="timeline-title">Senior Site Engineer & Construction Manager</div>
+                <div class="timeline-company">AYOPCO (2017 - 2022)</div>
+                <div class="timeline-desc">Supervising finishing works, quality control, and aggressive schedules across mega-developments like Stella Park (2B EGP) and King Salman International University (4B EGP).</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-title">Quantity Surveyor & Senior QS</div>
+                <div class="timeline-company">ORASCOM & AYOPCO (2013 - 2017)</div>
+                <div class="timeline-desc">Mastering cost control, BOQs, and variation orders on As-Salam Hospital, Egypt Post, and Social Housing projects (310M EGP).</div>
             </div>
         </section>
 
+        <!-- Mega-Project Portfolio Matrix -->
         <section>
-            <h3 class="section-title"><i class="fas fa-tools"></i> المهارات والقدرات التخصصية</h3>
+            <h3 class="section-title"><i class="fas fa-building"></i> Mega-Project Portfolio Matrix</h3>
+            <div style="overflow-x: auto;">
+                <table class="portfolio-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Budget</th>
+                            <th>Scope & Scale</th>
+                            <th>Sector</th>
+                            <th>Leadership Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Suez University</strong></td>
+                            <td>15 Billion EGP</td>
+                            <td>33 Educational Buildings</td>
+                            <td>Education</td>
+                            <td>Resident Engineer (DMA)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>King Salman University</strong></td>
+                            <td>4 Billion EGP</td>
+                            <td>Multi-facility University Campus</td>
+                            <td>Education</td>
+                            <td>Senior Site Engineer (AYOPCO)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stella Park</strong></td>
+                            <td>2 Billion EGP</td>
+                            <td>94 Buildings, 340 Villas, 4 Malls</td>
+                            <td>Luxury Residential</td>
+                            <td>Construction Manager (AYOPCO)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Skala Seafront</strong></td>
+                            <td>600 Million EGP</td>
+                            <td>79 Luxury Units, 18 Retaining Walls</td>
+                            <td>Mixed-Use / Coastal</td>
+                            <td>Project Manager (KRASS)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Technical & Management Skills -->
+        <section>
+            <h3 class="section-title"><i class="fas fa-tools"></i> Competencies & Technical Arsenal</h3>
             <div class="skills-grid">
-                <span class="skill-tag">إدارة المشاريع الإنشائية (PMC)</span>
-                <span class="skill-tag">المطالبات التعاقدية (EOT)</span>
-                <span class="skill-tag">إدارة المقاولين والموقع</span>
-                <span class="skill-tag">حصر الكميات والمستخلصات</span>
-                <span class="skill-tag">ضبط الجودة والسلامة (QA/QC & HSE)</span>
-                <span class="skill-tag">الأتمتة الهندسية (Google Sheets & AppSheet)</span>
-                <span class="skill-tag">AutoCAD & Revit</span>
+                <div class="skill-category">
+                    <h4>Executive Leadership</h4>
+                    <ul>
+                        <li>Executive Project Management</li>
+                        <li>Operational Leadership</li>
+                        <li>Stakeholder & Team Management</li>
+                        <li>Risk & Quality Assurance</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Financial & Cost Control</h4>
+                    <ul>
+                        <li>Budget & Cost Control</li>
+                        <li>BOQ Preparation</li>
+                        <li>Contract Administration</li>
+                        <li>Variation Orders Mastery</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Technical Arsenal</h4>
+                    <ul>
+                        <li>Primavera P6 (Scheduling)</li>
+                        <li>SAP2000 (Structural Analysis)</li>
+                        <li>AutoCAD & Structure Detailing</li>
+                        <li>MS Office & Administration</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h3 class="section-title"><i class="fas fa-envelope"></i> التواصل المهني</h3>
-            <p style="text-align: center; margin-bottom: 20px;">يسعدني التواصل والتعاون المهني في القطاعات الهندسية والتطوير العقاري.</p>
-            <div class="contact-links">
-                <a href="tel:+201015848520" class="contact-card"><i class="fas fa-phone"></i> +201015848520</a>
-                <a href="mailto:sherifazmy168@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> إرسال بريد إلكتروني</a>
-                <a href="https://www.linkedin.com/in/sherif-azmy-424a732a3/" target="_blank" class="contact-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>جميع الحقوق محفوظة © 2026 | م. شريف عزمي رشدي</p>
-    </footer>
-
-</body>
-</html>
+        <!-- Call to Action -->
+        <section style
